@@ -19,7 +19,7 @@ const BlogDetail = () => {
   };
   const fetchDetails = async () => {
     const res = await axios
-      .get(`https://blog-app-e53df.web.app/api/blog/${id}`)
+      .get(`/api/blog/${id}`)
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
@@ -35,7 +35,7 @@ const BlogDetail = () => {
   }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const sendRequest = async () => {
     const res = await axios
-      .put(`https://blog-app-e53df.web.app/api/blog/update/${id}`, {
+      .put(`http://localhost:5000/api/blog/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })

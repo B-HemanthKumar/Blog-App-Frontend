@@ -6,7 +6,7 @@ const Blogs = () => {
   const [blogs, setBlogs] = useState();
   const sendRequest = async () => {
     const res = await axios
-      .get('https://blog-app-e53df.web.app/api/blog')
+      .get('http://localhost:5000/api/blog')
       .catch((err) => console.log(err));
     const data = await res.data;
     return data;
