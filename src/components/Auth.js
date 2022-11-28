@@ -22,7 +22,7 @@ const Auth = () => {
   };
   const sendRequest = async (type = "login") => {
     const res = await axios
-      .post(`https://blog-app-e53df.web.app/api/user/${type}`, {
+      .post(`/api/user/${type}`, {
         name: inputs.name,
         email: inputs.email,
         password: inputs.password,

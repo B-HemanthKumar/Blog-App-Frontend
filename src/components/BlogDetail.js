@@ -35,7 +35,7 @@ const BlogDetail = () => {
   }, [id]); // eslint-disable-line react-hooks/exhaustive-deps
   const sendRequest = async () => {
     const res = await axios
-      .put(`http://localhost:5000/api/blog/update/${id}`, {
+      .put(`/api/blog/update/${id}`, {
         title: inputs.title,
         description: inputs.description,
       })
